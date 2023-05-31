@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, 
+    maximum-scale=1.0, minimun-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vision artificial</title>
+    <link rel="shortcut icon" href="img/icon_rec.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/page_index.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <script src="js/jquery.js"></script>
+    <script>
+		$(document).ready(function(){
+			$("#01").click(function(){
+				$("#modal,.popup-vsa").fadeIn(1000)
+			});
+            $("#02").click(function(){
+				$("#modal,.popup-cf").fadeIn(1000)
+			});
+            $("#03").click(function(){
+				$("#modal,.popup-rf").fadeIn(1000)
+			});
+            $("#04").click(function(){
+				$("#modal,.popup-au").fadeIn(1000)
+			});
+			$("#modal").click(function(){
+				$("#modal,.popup-vsa").fadeOut(1000)
+			});
+            $("#modal").click(function(){
+				$("#modal,.popup-cf").fadeOut(1000)
+			});
+            $("#modal").click(function(){
+				$("#modal,.popup-rf").fadeOut(1000)
+			});
+            $("#modal").click(function(){
+				$("#modal,.popup-au").fadeOut(1000)
+			});
+		});
+	</script>
+</head>
+
+<body>
+    <div id="modal"></div>
+
+    <div class="popup-vsa">
+        <div class="img-vsa"></div>
+        <div class="container-text">
+            <h2>Vision artificial</h2>
+            <p>La visión por computadora es una rama de la IA que se enfoca en examinar y analizar 
+                imágenes reales con el fin de proporcionar información específica. 
+                Los datos obtenidos son luego procesados por programas informáticos. <br> <br>
+                Esta tecnología se basa en el principio de cómo el cerebro y el ojo humano 
+                detectan y procesan una imagen para comprenderla. <br><br>
+                A pesar de sus numerosas aplicaciones, la visión artificial todavía enfrenta muchos desafíos y limitaciones. Por ejemplo: <br><br>
+                <ol>
+                    <li>Falta de datos de alta calidad</li>
+                    <li>Interrupción por factores ambientales (iluminación, perspectiva)</li>
+                    <li>Privacidad y seguridad</li>
+                    <li>Falta de especialistas</li>
+                </ol>
+                </p>
+        </div>
+    </div>
+
+    <div class="popup-cf">
+        <div class="img-cf"></div>
+        <div class="container-text">
+            <h2>Como funciona</h2>
+            <p>Las aplicaciones de visión artificial ejecutan <b>algoritmos</b> que se entrenan 
+                con enormes cantidades de <b> datos visuales</b> o imágenes en la nube. <br>
+                Reconocen <b>patrones</b> en los datos visuales y usan esos patrones para 
+                determinar el contenido de otras imágenes. <br> <br>
+                La visión artificial necesita de muchos datos, esta ejecuta <b>análisis de datos</b> 
+                una y otra vez hasta <b>identificar</b> diferencias y, finalmente, <b>reconocer</b> imágenes. <br>
+                Se utilizan dos tecnologías esenciales para lograr esto: un tipo de machine 
+                learning llamado <b> deep learning</b> y una <b>red neuronal convolucional (CNN)</b>. <br> <br>
+                Machine learning utiliza modelos algorítmicos que permiten que una computadora se enseñe 
+                a sí misma sobre el contexto de los datos visuales. Si se alimentan suficientes datos a 
+                través del modelo, la computadora "observará" los datos y se enseñará a diferenciar una 
+                imagen de otra. Los algoritmos permiten que la máquina aprenda por sí misma, en lugar de 
+                que alguien la programe para reconocer una imagen. <br> <br>
+                Una CNN ayuda a un modelo de machine learning o deep learning a "ver" al dividir las imágenes 
+                en píxeles a los que se les asignan etiquetas o rótulos. Utiliza las etiquetas para realizar 
+                convoluciones (una operación matemática en dos funciones para producir una tercera función) 
+                y hace predicciones sobre lo que está "viendo". <br> <br>
+                La red neuronal ejecuta convoluciones y verifica la precisión de sus predicciones en una serie 
+                de iteraciones hasta que las predicciones comienzan a hacerse realidad. Luego reconocerá o verá 
+                imágenes de una manera similar a los humanos. <br> <br>
+                Al igual que un humano que distingue una imagen a distancia, una CNN primero discierne los bordes 
+                sólidos y las formas simples, luego completa la información mientras ejecuta iteraciones de sus predicciones. <br>
+                Se utiliza una CNN para comprender imágenes individuales. Una red neuronal recurrente (RNN) se usa de manera 
+                similar para aplicaciones de video para ayudar a las computadoras a comprender cómo las imágenes en una serie de 
+                cuadros se relacionan entre sí. <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="popup-rf">
+        <div class="img-rf"></div>
+        <div class="container-text">
+            <h2>Reconocimiento facial</h2>
+            <p>El reconocimiento facial es una manera de identificar o confirmar 
+                la identidad de una persona mediante su rostro. Los sistemas de 
+                reconocimiento facial se pueden utilizar para identificar a las personas en fotos, videos o en tiempo real.
+            
+            </p>
+        </div>
+    </div>
+
+    <div class="popup-au">
+        <div class="img-au"></div>
+        <div class="container-text">
+            <h2>Local Binary Patterns Histograms</h2>
+            <p>LBPH (Histogramas de Patrones Binarios Locales) presenta mejoras respecto a los 
+                métodos anteriores, ya que es más robusto ante cambios de iluminación. Además, 
+                citando a la documentación de OpenCV: La idea es no mirar la imagen completa 
+                como un vector de alta dimensión, sino describir solo las características locales de un objeto. <br> <br>
+                El funcionamiento de este algoritmo se podria definir en los siguientes pasos: <br> <br>
+                <ol>
+                    <li>El primer paso es dividir la imagen en pequeñas partes llamadas celdas.</li>
+                    <li>Miramos cada píxel dentro de una celda y comparamos su brillo con el de sus vecinos.</li>
+                    <li>Dependiendo de si el vecino es más brillante o más oscuro, asignamos un "1" o un "0" al píxel que estamos mirando.</li>
+                    <li>Se realiza el mismo proceso con todas las imágenes</li>
+                    <li>Juntamos todos los histogramas de cada celda en un solo conjunto de números. Estos números representan toda la imagen y 
+                        se pueden usar para reconocer patrones o clasificar la imagen en diferentes categorías.</li>
+                </ol>
+            </p>
+        </div>
+    </div>
+
+    <header>
+        <section class="textos-header">
+            <h1>Aplicaciones de la vision artificial</h1>
+            <h2>Reconocimiento facial</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;">
+                </path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <section class="contenedor sobre-proyecto">
+            <h2 class="titulo">Nuestro proyecto</h2>
+            <div class="contenedor-sobre-proyecto">
+                <img src="img/nuestra.jpg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Sistema de reconocimiento facial</h3>
+                    <p>Se llevo a cabo el desarrollo de una aplicacion capaz de realizar actividades 
+                        de reconocimiento facial. El mismo registra el rostro de una persona, para posteriormente
+                        cuando el usuario haga uso del sistema, se haga comparacion de los registros guardados
+                        con la data que esta recibiendo y de esta forma definir si se trata de la misma persona.<br> 
+                        Se hizo una adaptacion de la aplicacion para que fuera capaz de guardar sus datos 
+                        en la nube y de esta forma tener acceso a los datos todo el tiempo, pues recordemos las
+                        ventajas que nos ofrecen los servicios de la nube.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="conceptos">
+            <div class="fondo"></div>
+            <div class="contenedor">
+                <h2 class="titulo">Conceptos necesarios</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port" id="01">
+                        <img src="img/concep_01.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Vision Artificial</p>
+                        </div>
+                    </div>
+
+                    <div class="imagen-port" id="02">
+                        <img src="img/concep_02.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Como funciona</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port" id="03">
+                        <img src="img/concep_03.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Reconocimiento facial</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port" id="04">
+                        <img src="img/concep_04.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Algoritmo utilizado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="integrantes contenedor">
+            <h2 class="titulo">Integrantes que conforman</h2>
+            <div class="cards">
+                <div class="card">
+                    <!--<img src="img/face1.jpg" alt="">-->
+                    <div class="contenido-texto-card">
+                        <h4>Carlos Ramirez</h4>
+                        <p>
+                            <ol>
+                                <li>Exp: </li>
+                                <li>email: </li>
+                                <li>cell: </li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- <img src="img/face2.jpg" alt=""> -->
+                    <div class="contenido-texto-card">
+                        <h4>Cristian Fernando</h4>
+                        <p>
+                            <ol>
+                                <li>Exp: </li>
+                                <li>email: </li>
+                                <li>cell: </li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- <img src="img/face.jpg" alt=""> -->
+                    <div class="contenido-texto-card">
+                        <h4>Agustin Hernandez Jesus Enrique</h4>
+                        <p>
+                            <ol>
+                                <li>Exp: 297130</li>
+                                <li>email: jeesusag31@gmail.com</li>
+                                <li>cell: 5529619605</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <!--<div class="content-foo">
+                <h4>date</h4>
+                <p>aqui ira algo</p>
+            </div>
+            <div class="content-foo">
+                <h4>date</h4>
+                <p>aqui ira algo mas</p>
+            </div>
+            <div class="content-foo">
+                <h4>date</h4>
+                <p>aqui deberia haber algo mas</p>
+            </div>-->
+        </div>
+        <h2 class="titulo-final">&copy; Team Undefined | @2023</h2>
+    </footer>
+</body>
+
+</html>
